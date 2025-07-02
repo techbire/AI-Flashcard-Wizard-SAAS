@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'AI Flashcard Wizard',
     images: [
       {
-        url: 'https://i.postimg.cc/RVWPD9Yp/Screenshot-2025-06-27-at-12-59-03-PM.png',
+        url: 'https://i.postimg.cc/65jX93Ct/Screenshot-2025-07-02-224028.png',
         width: 1200,
         height: 630,
         alt: 'AI Flashcard Wizard',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       'Transform any text into intelligent flashcards with AI. Study smarter with our AI-powered flashcard generator.',
     images: [
-      'https://i.postimg.cc/RVWPD9Yp/Screenshot-2025-06-27-at-12-59-03-PM.png',
+      'https://i.postimg.cc/65jX93Ct/Screenshot-2025-07-02-224028.png',
     ],
   },
   icons: {
