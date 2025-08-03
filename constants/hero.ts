@@ -22,13 +22,13 @@ export const HERO: HeroConfig = {
   description: 'Transform any text into interactive flashcards with AI. Study smarter, learn faster, and boost your memory retention.',
   buttonText: "Start Creating Flashcards",
   videoConfig: {
-    videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ?si=gcHuOpFRg38gbu4J',
+    videoSrc: 'https://www.youtube.com/embed/Hc0_ny-tQJ0?si=gYGg9wPqOn_HtAvU',
     lightThumbnail: {
-      src: 'https://startup-template-sage.vercel.app/hero-light.png',
+      src: 'https://i.postimg.cc/65jX93Ct/Screenshot-2025-07-02-224028.png',
       alt: 'AI Flashcard Generator',
     },
     darkThumbnail: {
-      src: 'https://startup-template-sage.vercel.app/hero-dark.png',
+      src: 'https://i.postimg.cc/65jX93Ct/Screenshot-2025-07-02-224028.png',
       alt: 'AI Flashcard Generator',
     },
   },
