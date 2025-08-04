@@ -24,12 +24,14 @@ export const HERO: HeroConfig = {
   videoConfig: {
     videoSrc: 'https://www.youtube.com/embed/Hc0_ny-tQJ0?si=gYGg9wPqOn_HtAvU',
     lightThumbnail: {
-      src: 'https://i.postimg.cc/65jX93Ct/Screenshot-2025-07-02-224028.png',
+      src: 'https://startup-template-sage.vercel.app/hero-light.png',
       alt: 'AI Flashcard Generator',
     },
     darkThumbnail: {
-      src: 'https://i.postimg.cc/65jX93Ct/Screenshot-2025-07-02-224028.png',
+      src: 'https://startup-template-sage.vercel.app/hero-dark.png',
       alt: 'AI Flashcard Generator',
     },
   },
 }
+
+
