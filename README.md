@@ -1,119 +1,212 @@
-# AI Flashcard Wizard 🧠✨
+# 🧙‍♂️ AI Flashcard Wizard - SaaS
 
-Transform any text into intelligent flashcards with AI. Study smarter, learn faster, and boost your memory retention.
+Transform any text into intelligent flashcards with AI. Study smarter with our AI-powered flashcard generator.
 
-## ✨ Features
+![Next.js](https://img.shields.io/badge/Next.js-15.3-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-19.0-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=flat-square&logo=tailwind-css)
 
-- **🤖 AI-Powered Generation**: Powered by Google Gemini AI to create smart flashcards
-- **🔄 Interactive Study Mode**: Flip cards with smooth animations
-- **☁️ Cloud Sync**: Access your flashcards anywhere, anytime
-- **📱 Mobile Responsive**: Perfect experience on all devices
-- **👤 User Authentication**: Secure login with Clerk
-- **💳 Payment Integration**: Razorpay payment gateway for subscriptions
-- **📊 Progress Tracking**: Monitor your learning progress
-- **🎨 Modern UI**: Beautiful, clean design with dark/light themes
+## 🌟 Features
 
-## 🚀 Quick Start
+- **AI-Powered Generation**: Create flashcards instantly using Google's Generative AI
+- **Smart Collections**: Organize your flashcards into unlimited collections
+- **Firebase Integration**: Secure cloud storage for all your study materials
+- **Authentication**: Secure user authentication with Clerk
+- **Payment Integration**: Razorpay payment gateway for subscriptions
+- **Responsive Design**: Beautiful UI that works on all devices
+- **Dark Mode**: Eye-friendly dark theme support
+- **Advanced Analytics**: Track your study progress (Pro plan)
+- **Export to PDF**: Download your flashcards (Pro plan)
+
+## 📦 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) + Custom Components
+- **Authentication**: [Clerk](https://clerk.com/)
+- **Database**: [Firebase](https://firebase.google.com/)
+- **AI**: [Google Generative AI](https://ai.google.dev/)
+- **Payments**: [Razorpay](https://razorpay.com/)
+- **Icons**: [Lucide React](https://lucide.dev/) + [Phosphor Icons](https://phosphoricons.com/)
+- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+- **Animations**: [Motion (Framer Motion)](https://motion.dev/)
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ and npm
-- Firebase project
-- Clerk account for authentication
-- Google AI Studio account for Gemini API
-- Razorpay account for payments
+- Node.js 20.x or higher
+- npm, yarn, or pnpm
+- Firebase account
+- Clerk account
+- Google AI API key
+- Razorpay account (for payments)
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd ai-flashcard-wizard
+   git clone https://github.com/techbire/AI-Flashcard-Wizard-SAAS.git
+   cd AI-Flashcard-Wizard-SAAS
    ```
 
 2. **Install dependencies**
    ```bash
    npm install
+   # or
+   yarn install
+   # or
+   pnpm install
    ```
 
 3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
    
-   Fill in your API keys and configuration:
-   - `GEMINI_API_KEY`: Get from Google AI Studio
-   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` & `CLERK_SECRET_KEY`: From Clerk dashboard
-   - Firebase configuration variables
-   - Razorpay keys for payments
+   Create a `.env.local` file in the root directory:
+   ```env
+   # Clerk Authentication
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+   # Firebase Configuration
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
+
+   # Google Generative AI
+   GOOGLE_API_KEY=your_google_ai_api_key
+
+   # Razorpay
+   NEXT_PUBLIC_RAZORPAY_KEY_ID=your_razorpay_key_id
+   RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+   ```
 
 4. **Run the development server**
    ```bash
    npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
    ```
 
 5. **Open your browser**
-   Visit [http://localhost:3000](http://localhost:3000)
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🏗️ Tech Stack
+## 📁 Project Structure
 
-- **Frontend**: Next.js 15, React 19, TypeScript
-- **UI Framework**: Tailwind CSS, Radix UI
-- **Authentication**: Clerk
-- **Database**: Firebase Firestore
-- **AI**: Google Gemini AI
-- **Payments**: Razorpay
-- **Deployment**: Vercel
+```
+AI-Flashcard-Wizard-SAAS/
+├── app/                      # Next.js App Router
+│   ├── api/                  # API routes
+│   │   ├── checkout-session-basic/
+│   │   ├── checkout-session-pro/
+│   │   ├── generate/         # AI flashcard generation
+│   │   └── verify-payment/
+│   ├── flashcard/            # Single flashcard view
+│   ├── flashcards/           # Flashcard collection view
+│   ├── generate/             # Generate flashcards page
+│   ├── result/               # Payment result page
+│   ├── sign-in/              # Authentication pages
+│   └── sign-up/
+├── components/               # React components
+│   ├── magicui/             # Magic UI components
+│   ├── sections/            # Landing page sections
+│   └── ui/                  # Reusable UI components
+├── constants/               # Configuration constants
+├── lib/                     # Utility functions
+│   ├── firebase.js         # Firebase configuration
+│   └── firebaseOperations.js
+└── public/                  # Static assets
+```
 
-## 📱 Usage
+## 💳 Pricing Plans
 
-1. **Sign up** for a new account
-2. **Choose a plan** (Basic ₹100/month or Pro ₹500/month)
-3. **Generate flashcards** by pasting your study material
-4. **Study** with interactive flip animations
-5. **Save collections** for organized learning
-6. **Access anywhere** with cloud sync
+### Basic Plan
+- ₹100/month or ₹1000/year (Save 17%)
+- 1,000 flashcards
+- AI-powered generation
+- Basic collections
+- Mobile access
 
-## 💡 API Endpoints
+### Pro Plan (Popular)
+- ₹500/month or ₹5000/year (Save 17%)
+- 100,000 flashcards
+- AI-powered generation
+- Unlimited collections
+- Mobile & web access
+- Priority support
+- Advanced analytics
+- Export to PDF
 
-- `POST /api/generate` - Generate flashcards from text
-- `POST /api/checkout-session-basic` - Create basic plan payment
-- `POST /api/checkout-session-pro` - Create pro plan payment
-- `POST /api/verify-payment` - Verify Razorpay payment
+## 🛠️ Available Scripts
 
-## 🔧 Configuration
+```bash
+# Development
+npm run dev          # Start development server with Turbopack
 
-### Firebase Setup
-1. Create a Firebase project
-2. Enable Firestore Database
-3. Add your web app configuration to environment variables
+# Build
+npm run build        # Create production build
+npm run start        # Start production server
 
-### Clerk Setup
-1. Create a Clerk application
-2. Configure sign-in/sign-up URLs
-3. Add API keys to environment variables
+# Code Quality
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues
+npm run format       # Format code with Prettier
+```
 
-### Razorpay Setup
-1. Create a Razorpay account
-2. Get your Key ID and Key Secret
-3. Add to environment variables
+## 🎨 Features Breakdown
 
-## 📊 Pricing Plans
+### AI Generation
+- Powered by Google's Generative AI (Gemini)
+- Intelligent question-answer pair generation
+- Context-aware flashcard creation
 
-- **Basic Plan**: ₹100/month
-  - 1,000 flashcards
-  - AI-powered generation
-  - Mobile access
-  
-- **Pro Plan**: ₹500/month
-  - 100,000 flashcards
-  - Unlimited collections
-  - Priority support
-  - Advanced analytics
+### User Management
+- Secure authentication with Clerk
+- User profiles and preferences
+- Session management
+
+### Storage
+- Firebase Firestore for flashcard storage
+- Real-time synchronization
+- Secure data access rules
+
+### Payment Processing
+- Razorpay integration for Indian market
+- Subscription management
+- Payment verification webhooks
+
+## 🔒 Security
+
+- Environment variables for sensitive data
+- Clerk authentication for secure user access
+- Firebase security rules
+- Payment verification on server-side
+
+## 📱 Responsive Design
+
+The application is fully responsive and works seamlessly on:
+- 📱 Mobile devices
+- 💻 Tablets
+- 🖥️ Desktops
+
+## 🌙 Dark Mode
+
+Built-in dark mode support using `next-themes` for a comfortable studying experience in any lighting condition.
 
 ## 🤝 Contributing
 
-1. Fork the repository
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
@@ -121,15 +214,23 @@ Transform any text into intelligent flashcards with AI. Study smarter, learn fas
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is private and proprietary.
 
-## � Acknowledgments
+## 👤 Author
 
-- Google Gemini AI for intelligent flashcard generation
-- Clerk for seamless authentication
-- Razorpay for secure payments
-- The open-source community for amazing tools and libraries
+**techbire**
+
+- GitHub: [@techbire](https://github.com/techbire)
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Vercel for hosting and analytics
+- Clerk for authentication
+- Firebase for database
+- Google for Generative AI
+- Razorpay for payment processing
 
 ---
 
-**Built with ❤️ for smarter studying**
+Made with ❤️ by [techbire](https://github.com/techbire)
